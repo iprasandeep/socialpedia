@@ -4,6 +4,8 @@ import Register from './pages/register/Register';
 import Navbar from './components/navbar/Navbar';
 import Rightbar from './components/rightbar/Rightbar';
 
+import Profile from './pages/profile/Profile';
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -11,9 +13,11 @@ import {
   Link,
   Outlet,
 } from "react-router-dom";
-
+import Leftbar from './components/leftbar/Leftbar';
 
 function App() {
+  
+  // fake functionality for, if user is not logged in then it will redirect automaticaly to login/register page.
 
   const Layout = () =>{
     return (
@@ -22,12 +26,28 @@ function App() {
         <div className={{display: "flex"}} >
         </div>
         <Outlet />
+        <Leftbar />
         <Rightbar />
       </div>
     )
   }
 
   const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Layout />,
+      children: [
+        {
+          path: '/',
+          element: <Home />
+        },
+        {
+          path: '/profile/:id',
+          element: <Profile />
+        }
+      ]
+    },
+
     {
       path: "/login",
       element: <Login />,
