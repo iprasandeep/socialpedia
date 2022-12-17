@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './login.scss';
 
 const Login = () => {
@@ -9,7 +10,9 @@ const Login = () => {
           <h1>Hello, World!</h1>
           <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
             <spam>Don't you have an account?</spam>
+            <Link to='/register'>
             <button>Register</button>
+            </Link>
         </div>
         <div className='right'>
           <h1>Login</h1>
