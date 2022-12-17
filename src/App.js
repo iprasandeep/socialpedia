@@ -1,8 +1,11 @@
+import Home from './pages/home/Home';
+import Login from './pages/login/Login';
+
 
 function App() {
   return (
     <div className="App">
-      <h2>Hello, this is begining for Social Pedia Appilcation!</h2>
+    <Login />
     </div>
   );
 }
