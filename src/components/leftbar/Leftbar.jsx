@@ -29,9 +29,8 @@ const Leftbar = () => {
                     <img src="" alt="" />
                     <span>Memories</span>
                 </div>
-              
             </div>
-            <hr />
+            <hr/>
             <div className="menu">
                 <span>Your Shortcuts</span>
 
@@ -55,6 +54,27 @@ const Leftbar = () => {
                     <img src="" alt="" />
                     <span>Memories</span>
                 </div>
+            </div>
+            <hr />
+            <div className="menu">
+                <span>Others</span>
+                <div className="item">
+                    <img src="" alt="" />
+                    <span>Friends</span>
+                </div>
+                <div className="item">
+                    <img src="" alt="" />
+                    <span>Groups</span>
+                </div>
+                <div className="item">
+                    <img src="" alt="" />
+                    <span>Marketplace</span>
+                </div>
+                <div className="item">
+                    <img src="" alt="" />
+                    <span>Watch</span>
+                </div>
+                
             </div>
         </div>
     </div>
