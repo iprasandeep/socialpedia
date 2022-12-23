@@ -3,7 +3,7 @@ import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import Navbar from './components/navbar/Navbar';
 import Rightbar from './components/rightbar/Rightbar';
-
+import './style.scss';
 import Profile from './pages/profile/Profile';
 
 import {
@@ -20,10 +20,10 @@ function App() {
   // fake functionality for, if user is not logged in then it will redirect automaticaly to login/register page.
   const currentUser = false;
 
- 
+
   const Layout = () =>{
     return (
-      <div>
+      <div className='theme-dark'>
         <Navbar />
           <div style={{display: "flex"}} >
           <Leftbar />

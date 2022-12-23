@@ -74,6 +74,44 @@ const Rightbar = () => {
         {/* Online Friends */}
         <div className="item">
           <span>Online Friends</span>
+            <div className='user'>
+              <div className="userInfo">
+                <img src="" alt="" />
+                <div className="online" />
+                <span>John Doe</span>
+              </div>
+            </div>
+
+            <div className='user'>
+              <div className="userInfo">
+                <img src="" alt="" />
+                <div className="online" />
+                <span>John Doe</span>
+              </div>
+            </div>
+
+            <div className='user'>
+              <div className="userInfo">
+                <img src="" alt="" />
+                <div className="online" />
+                <span>John Doe</span>
+              </div>
+            </div>
+            <div className='user'>
+              <div className="userInfo">
+                <img src="" alt="" />
+                <div className="online" />
+                <span>John Doe</span>
+              </div>
+            </div>
+
+            <div className='user'>
+              <div className="userInfo">
+                <img src="" alt="" />
+                <div className="online" />
+                <span>John Doe</span>
+              </div>
+            </div>
         </div>
 
       </div>
