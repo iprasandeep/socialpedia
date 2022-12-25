@@ -3,7 +3,9 @@ import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import Navbar from './components/navbar/Navbar';
 import Rightbar from './components/rightbar/Rightbar';
-import './style.scss';
+import './style.scss'
+import { useContext } from 'react';
+import { DarkModeCotext } from './context/darkModeContext';
 import Profile from './pages/profile/Profile';
 
 import {
@@ -20,10 +22,12 @@ function App() {
   // fake functionality for, if user is not logged in then it will redirect automaticaly to login/register page.
   const currentUser = false;
 
+  const {darkMode} = useContext(DarkModeCotext)
+  console.log(darkMode)
 
   const Layout = () =>{
-    return (
-      <div className='theme-dark'>
+    return ( 
+      <div className={`theme-${darkMode ? 'dark' : 'light'}`}>
         <Navbar />
           <div style={{display: "flex"}} >
           <Leftbar />
@@ -33,7 +37,7 @@ function App() {
           <Rightbar />
         </div>
       </div>
-    );  
+    );   
   };
 
   const ProtectedRoute = ({ children}) => {

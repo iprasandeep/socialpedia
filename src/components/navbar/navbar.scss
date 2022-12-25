@@ -1,64 +1,70 @@
 @import "../../style.scss";
 
-.navbar{
-    @include themify($themes){
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    height: 50px;
-    border-bottom: 1px solid lightgray;
-    position: sticky;
-    top: 0;
-    background-color: themed('bg');
-    .left{
+    .navbar{
+        @include themify($themes){
         display: flex;
-        align-items: center;
-        gap: 30px;
-
-        span{
-            font-weight: bold;
-            font-size: 20px;
-            color: darkblue;
-            text-decoration: none;
-        }
-        .search{
+        justify-content: space-between;
+        padding: 10px 20px;
+        height: 50px;
+        border-bottom: 1px solid themed('border');
+        position: sticky;
+        top: 0;
+        background-color: themed("bg");
+        color: themed("textColor");
+        
+        .left{
             display: flex;
             align-items: center;
-            border: 1px solid lightgrey;
-            border-radius: 5px;
-            padding: 5px;
+            gap: 30px;
 
-            input{
-                border: none;
+            span{
+                font-weight: bold;
+                font-size: 20px;
+                color: themed('logo');
+                text-decoration: none;
             }
-            input:focus{
-                outline:none;
+            .search{
+                display: flex;
+                align-items: center;
+                border: 1px solid lightgrey;
+                border-radius: 5px;
+                padding: 5px;
+
+                input{
+                    border: none;
+                    width: 500;
+                    background-color: transparent;
+                    font-size: 2vh;
+                    color: themed('textColor');
+                }
+                input:focus{
+                    outline:none;
+                }
+            }
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .user{
+                display: flex;
+                align-items: center;
+                gap: 10px ;
+                font-weight: 500;
+                img{
+                    width: 30px;
+                    height: 30px;
+                    
+                    border: 1px solid black;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    
+                }
+                span{
+
+                }
             }
         }
     }
-    .right{
-        display: flex;
-        align-items: center;
-        gap: 20px;
-
-        .user{
-            display: flex;
-            align-items: center;
-            gap: 10px ;
-            font-weight: 500;
-            img{
-                width: 30px;
-                height: 30px;
-                
-                border: 1px solid black;
-                border-radius: 50%;
-                object-fit: cover;
-                
-            }
-            // span{
-
-            // }
-        }
-    }
-}
 }
