@@ -5,7 +5,7 @@ import Navbar from './components/navbar/Navbar';
 import Rightbar from './components/rightbar/Rightbar';
 import './style.scss'
 import { useContext } from 'react';
-import { DarkModeCotext } from './context/darkModeContext';
+import { DarkModeContext } from './context/darkModeContext';
 import Profile from './pages/profile/Profile';
 
 import {
@@ -16,13 +16,14 @@ import {
   Outlet,
 } from "react-router-dom";
 import Leftbar from './components/leftbar/Leftbar';
+import { AuthContext } from './context/authContext';
 
 function App() {
   
   // fake functionality for, if user is not logged in then it will redirect automaticaly to login/register page.
-  const currentUser = false;
+  const { currentUser } = useContext(AuthContext);
 
-  const {darkMode} = useContext(DarkModeCotext)
+  const {darkMode} = useContext(DarkModeContext)
   console.log(darkMode)
 
   const Layout = () =>{
